@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\OneDrive\\Documents\\Generation\\GIT\\BlogPessoal\\BlogPessoal\\BlogPessoal\\BlogPessoal.csproj": {}
+    "C:\\Users\\user\\OneDrive\\Documents\\Generation\\GIT\\BlogPessoal\\BPVSC\\BlogPessoal\\BlogPessoal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\OneDrive\\Documents\\Generation\\GIT\\BlogPessoal\\BlogPessoal\\BlogPessoal\\BlogPessoal.csproj": {
+    "C:\\Users\\user\\OneDrive\\Documents\\Generation\\GIT\\BlogPessoal\\BPVSC\\BlogPessoal\\BlogPessoal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\OneDrive\\Documents\\Generation\\GIT\\BlogPessoal\\BlogPessoal\\BlogPessoal\\BlogPessoal.csproj",
+        "projectUniqueName": "C:\\Users\\user\\OneDrive\\Documents\\Generation\\GIT\\BlogPessoal\\BPVSC\\BlogPessoal\\BlogPessoal.csproj",
         "projectName": "BlogPessoal",
-        "projectPath": "C:\\Users\\user\\OneDrive\\Documents\\Generation\\GIT\\BlogPessoal\\BlogPessoal\\BlogPessoal\\BlogPessoal.csproj",
+        "projectPath": "C:\\Users\\user\\OneDrive\\Documents\\Generation\\GIT\\BlogPessoal\\BPVSC\\BlogPessoal\\BlogPessoal.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\OneDrive\\Documents\\Generation\\GIT\\BlogPessoal\\BlogPessoal\\BlogPessoal\\obj\\",
+        "outputPath": "C:\\Users\\user\\OneDrive\\Documents\\Generation\\GIT\\BlogPessoal\\BPVSC\\BlogPessoal\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,20 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[5.0.13, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
