@@ -20,7 +20,6 @@ C:\Users\user\OneDrive\Documents\Generation\GIT\BlogPessoal\BPVSC\BlogPessoal\bi
 C:\Users\user\OneDrive\Documents\Generation\GIT\BlogPessoal\BPVSC\BlogPessoal\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
 C:\Users\user\OneDrive\Documents\Generation\GIT\BlogPessoal\BPVSC\BlogPessoal\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\user\OneDrive\Documents\Generation\GIT\BlogPessoal\BPVSC\BlogPessoal\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\user\OneDrive\Documents\Generation\GIT\BlogPessoal\BPVSC\BlogPessoal\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\user\OneDrive\Documents\Generation\GIT\BlogPessoal\BPVSC\BlogPessoal\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
 C:\Users\user\OneDrive\Documents\Generation\GIT\BlogPessoal\BPVSC\BlogPessoal\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\user\OneDrive\Documents\Generation\GIT\BlogPessoal\BPVSC\BlogPessoal\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
@@ -53,3 +52,4 @@ C:\Users\user\OneDrive\Documents\Generation\GIT\BlogPessoal\BPVSC\BlogPessoal\ob
 C:\Users\user\OneDrive\Documents\Generation\GIT\BlogPessoal\BPVSC\BlogPessoal\obj\Debug\net5.0\BlogPessoal.pdb
 C:\Users\user\OneDrive\Documents\Generation\GIT\BlogPessoal\BPVSC\BlogPessoal\obj\Debug\net5.0\BlogPessoal.genruntimeconfig.cache
 C:\Users\user\OneDrive\Documents\Generation\GIT\BlogPessoal\BPVSC\BlogPessoal\obj\Debug\net5.0\ref\BlogPessoal.dll
+C:\Users\user\OneDrive\Documents\Generation\GIT\BlogPessoal\BPVSC\BlogPessoal\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

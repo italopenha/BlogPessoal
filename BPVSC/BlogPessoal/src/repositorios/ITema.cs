@@ -4,14 +4,13 @@ using BlogPessoal.src.modelos;
 
 namespace BlogPessoal.src.repositorios
 {
-    public interface ITema
-    {
     /// <summary>
     /// <para>Resumo: Responsavel por representar ações de CRUD de tema</para>
     /// <para>Criado por: Ítalo Penha</para>
     /// <para>Versão: 1.0</para>
     /// <para>Data: 29/04/2022</para>
     /// </summary>
+
     public interface ITema
     {
         void NovoTema(NovoTemaDTO tema);
@@ -20,6 +19,5 @@ namespace BlogPessoal.src.repositorios
         TemaModelo PegarTemaPeloId(int id);
         List<TemaModelo> PegarTemaPelaDescricao(string descricao);
     }
-
-    }
+ 
 }
