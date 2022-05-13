@@ -1,11 +1,12 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using BlogPessoal.src.dtos;
 using BlogPessoal.src.modelos;
 
 namespace BlogPessoal.src.repositorios
 {
     /// <summary>
-    /// <para>Resumo: Responsavel por representar ações de CRUD de postagens</para>
+    /// <para>Resumo: Responsável por representar ações de CRUD de postagens</para>
     /// <para>Criado por: Ítalo Penha</para>
     /// <para>Versão: 1.0</para>
     /// <para>Data: 29/04/2022</para>
@@ -13,16 +14,16 @@ namespace BlogPessoal.src.repositorios
     
     public interface IPostagem
     {
-        void NovaPostagem(NovaPostagemDTO postagem);
+        Task NovaPostagemAsync (NovaPostagemDTO postagem);
 
-        void AtualizarPostagem(AtualizarPostagemDTO postagem);
+        Task AtualizarPostagemAsync (AtualizarPostagemDTO postagem);
 
-        void DeletarPostagem(int id);
+        Task DeletarPostagemAsync (int id);
 
-        PostagemModelo PegarPostagemPeloId(int id);
+        Task <PostagemModelo> PegarPostagemPeloIdAsync (int id);
 
         List<PostagemModelo> PegarTodasPostagens();
         
-        List<PostagemModelo> PegarPostagensPorPesquisa(string titulo, string descricaoTema, string nomeCriador);
+        Task <List<PostagemModelo>> PegarPostagensPorPesquisaAsync (string titulo, string descricaoTema, string nomeCriador);
     }
 }

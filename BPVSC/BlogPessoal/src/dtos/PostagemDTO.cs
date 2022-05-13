@@ -37,7 +37,7 @@ namespace BlogPessoal.src.dtos
 
     /// <summary>
     /// <para>Resumo: Classe espelho para alterar uma postagem</para>
-    /// <para>Criado por: Gustavo Boaz</para>
+    /// <para>Criado por: Ítalo Penha</para>
     /// <para>Versão: 1.0</para>
     /// <para>Data: 29/04/2022</para>
     /// </summary>

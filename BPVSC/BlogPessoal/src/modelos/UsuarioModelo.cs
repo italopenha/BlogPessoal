@@ -7,6 +7,12 @@ using BlogPessoal.src.utilidades;
 
 namespace BlogPessoal.src.modelos
 {
+    /// <summary>
+    /// <para>Resumo: Classe responsável por representar tb_usuarios no banco.</para>
+    /// <para>Criado por: Ítalo Penha</para>
+    /// <para>Versão: 1.0</para>
+    /// <para>Data: 12/05/2022</para>
+    /// </summary>
     [Table("tb_usuarios")]
     public class UsuarioModelo
     {

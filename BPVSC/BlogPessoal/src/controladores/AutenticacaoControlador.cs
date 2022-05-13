@@ -1,7 +1,10 @@
 using System;
+using System.Threading.Tasks;
 using BlogPessoal.src.dtos;
+using BlogPessoal.src.modelos;
 using BlogPessoal.src.servicos;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BlogPessoal.src.controladores
@@ -26,15 +29,25 @@ namespace BlogPessoal.src.controladores
 
        #region Metodos
 
+        /// <summary>
+        /// Autenticar usuário
+        /// </summary>
+        /// <param name="autenticacao">int</param>
+        /// <returns>ActionResult</returns>
+        /// <response code="200">Valida a autenticação</response>
+        /// <response code="400">Nega a autenticação</response>   
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(UsuarioModelo))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
        [HttpPost]
        [AllowAnonymous]
-       public IActionResult Autenticar([FromBody] AutenticarDTO autenticacao)
+       public async Task <ActionResult> Autenticar([FromBody] AutenticarDTO autenticacao)
        {
            if(!ModelState.IsValid) return BadRequest();
            
            try
            {
-               var autorizacao = _servicos.PegarAutorizacao(autenticacao);
+               var autorizacao = await _servicos.PegarAutorizacaoAsync(autenticacao);
                return Ok(autorizacao);
            }
            catch (Exception ex)
