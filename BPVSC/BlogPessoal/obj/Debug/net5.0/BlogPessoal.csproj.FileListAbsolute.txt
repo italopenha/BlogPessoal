@@ -115,3 +115,5 @@ c:\Users\italo\Documents\Generation\GIT\BlogPessoal\BPVSC\BlogPessoal\bin\Debug\
 c:\Users\italo\Documents\Generation\GIT\BlogPessoal\BPVSC\BlogPessoal\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 c:\Users\italo\Documents\Generation\GIT\BlogPessoal\BPVSC\BlogPessoal\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 c:\Users\italo\Documents\Generation\GIT\BlogPessoal\BPVSC\BlogPessoal\obj\Debug\net5.0\BlogPessoal.xml
+C:\Users\italo\Documents\Generation\GIT\BlogPessoal\BPVSC\BlogPessoal\bin\Debug\net5.0\Npgsql.dll
+C:\Users\italo\Documents\Generation\GIT\BlogPessoal\BPVSC\BlogPessoal\bin\Debug\net5.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll

@@ -41,7 +41,7 @@ namespace BlogPessoal.src.controladores
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
        [HttpPost]
        [AllowAnonymous]
-       public async Task <ActionResult> Autenticar([FromBody] AutenticarDTO autenticacao)
+       public async Task <ActionResult> AutenticarAsync([FromBody] AutenticarDTO autenticacao)
        {
            if(!ModelState.IsValid) return BadRequest();
            

@@ -34,14 +34,18 @@ namespace BlogPessoal
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            //Configuração Banco de Dados
-            IConfigurationRoot config = new ConfigurationBuilder()
-                .SetBasePath(AppDomain.CurrentDomain.BaseDirectory)
-                .AddJsonFile("appsettings.json")
-                .Build();
-
-                services.AddDbContext<BlogPessoalContexto>(
-                    opt => opt.UseSqlServer(config.GetConnectionString("DefaultConnection")));
+                //Configuração Banco de Dados
+                if (Configuration["Enviroment:Start"] == "PROD")
+                {
+                    services.AddEntityFrameworkNpgsql()
+                        .AddDbContext<BlogPessoalContexto>(
+                        opt => opt.UseNpgsql(Configuration["ConnectionStringsProd:DefaultConnection"]));
+                }
+                else
+                {
+                    services.AddDbContext<BlogPessoalContexto>(
+                        opt => opt.UseSqlServer(Configuration["ConnectionStringsDev:DefaultConnection"]));
+                }
 
                 // Repositorios
                 services.AddScoped<IUsuario, UsuarioRepositorio>();
@@ -116,16 +120,26 @@ namespace BlogPessoal
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, BlogPessoalContexto contexto)
         {
+            // Ambiente de Desenvolvimento
             if (env.IsDevelopment())
             {
                 contexto.Database.EnsureCreated();
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "BlogPessoal v1"));
-
+                app.UseSwaggerUI(c => {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "BlogPessoal v1");
+                c.RoutePrefix = string.Empty;
+                });
             }
 
             // Ambiente de produção
+            contexto.Database.EnsureCreated();
+            app.UseDeveloperExceptionPage();
+            app.UseSwagger();
+            app.UseSwaggerUI(c => {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "BlogPessoal v1");
+                c.RoutePrefix = string.Empty;
+            });
             // Rotas
             app.UseRouting();
 
